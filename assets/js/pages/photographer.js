@@ -1,5 +1,5 @@
-import { getPhotographerById, getImagesByPhotographerId } from "../tools/getData.js";
-import { photographerInfoNodes } from "../dom/domElements.js"
+import { getData, getPhotographerById, getMediaByUserId } from "../tools/getData.js";
+import { photographerPageNodes } from "../dom/domElements.js"
 
 
 const params = new URLSearchParams(document.location.search);
@@ -11,14 +11,18 @@ const photographerName = params.get('name');
 const images = null;
 
 const photographerInfo = await getPhotographerById(photographerId);
-console.log(photographerInfo)
 
-photographerInfoNodes.userName.innerText = photographerInfo.name;
-photographerInfoNodes.userLocation.innerText = photographerInfo.city + ", " + photographerInfo.country;
-photographerInfoNodes.usertagLine.innerText = photographerInfo.tagline;
-photographerInfoNodes.userName.innerText = photographerInfo.name;
-photographerInfoNodes.profilePicture.setAttribute('src', "assets/images/Photographers ID Photos/" + photographerInfo.portrait )
-
+photographerPageNodes.userName.innerText = photographerInfo.name;
+photographerPageNodes.userLocation.innerText = photographerInfo.city + ", " + photographerInfo.country;
+photographerPageNodes.usertagLine.innerText = photographerInfo.tagline;
+photographerPageNodes.userName.innerText = photographerInfo.name;
+photographerPageNodes.profilePicture.setAttribute('src', "assets/images/Photographers ID Photos/" + photographerInfo.portrait )
 
 
+const media = await getMediaByUserId(photographerId);
+
+const initiatePage = (media) => {
+
+}
+getData('photographers');
 document.title = photographerName

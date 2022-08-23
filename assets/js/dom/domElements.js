@@ -2,11 +2,14 @@ const domElements = {
     photographer_section: document.getElementById('photographer_section'),
 }
 
-const photographerInfoNodes = {
+const photographerPageNodes = {
     userName: document.getElementById('userName'),
     userLocation: document.getElementById('userLocation'),
     usertagLine: document.getElementById('usertagLine'),
-    profilePicture: document.getElementById('profilePicture')
+    profilePicture: document.getElementById('profilePicture'),
+    photoCollection: document.getElementById('photoCollection')
 };
 
-export { domElements, photographerInfoNodes }
+
+
+export { domElements, photographerPageNodes }

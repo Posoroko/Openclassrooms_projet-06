@@ -1,4 +1,22 @@
-import { dataUrl } from '../config/config.js'
+import { dataUrl } from '../config/config.js';
+
+const getData = async (foo) => {
+    let docs = null;
+
+    await fetch(dataUrl)
+    .then(res => {
+        return res.json()
+    })
+    .then(data => {
+        docs = data;
+    });
+    console.log(docs[foo]);
+    
+    return docs;
+    
+}
+
+
 
 const getPhotographers = async () => {
 
@@ -35,7 +53,23 @@ const getImagesByPhotographerId = async (id) => {
     console.log(photographers);
 }
 
-export  { getPhotographers,getPhotographerById, getImagesByPhotographerId }
+const getMediaByUserId = async (id) => {
+
+    const data = await getData()
+    let media = [];
+
+    for(let i = 0; i < data.media.length; i++) {
+
+        if(data.media[i].photographerId == parseInt(id)) {
+
+            media.push(data.media[i]);
+        }
+    }
+    return media
+}
+ 
+
+export  { getData, getPhotographers,getPhotographerById, getMediaByUserId }
 
 
 
