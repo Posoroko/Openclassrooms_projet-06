@@ -1,0 +1,36 @@
+@import url("../abstracts/variables.css");
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.photographer_section article:hover .imgBox {
+    box-shadow: var(--shadow);
+}
+.photographer_section article:hover .imgBox img{
+    width: 101%;
+    height: 101%;
+}
+
+.photographer_section article h2 {
+    color: var(--darkpink);
+    font-size: 36px;
+}
+
+.photographer_section article .imgBox {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.photographer_section article .imgBox img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

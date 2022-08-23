@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/pages/photographer.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
@@ -14,9 +15,25 @@
     </header>
 
     <main id="main">
+      
+
       <div class="photograph-header">
+        <div class="userInfoBox">
+          <h1 class="userName" id="userName"></h1>
+  
+          <address class="userLocation" id="userLocation"></address>
+  
+          <p class="usertagLine" id="usertagLine"></p>
+        </div>
+
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+
+        <div class="profilePictureBox">
+          <img class="profilePicture" id="profilePicture" src="" alt="">
+        </div>
       </div>
+
+      
     </main>
     
     <div id="contact_modal">
@@ -39,7 +56,7 @@
       </div>
     </div>
 
-    <script src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/pages/photographer.js"></script>
 
   </body>
 </html>
