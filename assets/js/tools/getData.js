@@ -1,6 +1,8 @@
 import { dataUrl } from '../config/config.js';
 
-const getData = async (foo) => {
+//getData takes one argument: a string representing the type of data to querry
+
+const getData = async (dataType) => {
     let docs = null;
 
     await fetch(dataUrl)
@@ -8,68 +10,37 @@ const getData = async (foo) => {
         return res.json()
     })
     .then(data => {
-        docs = data;
+        docs = data[dataType];
     });
-    console.log(docs[foo]);
     
     return docs;
     
 }
 
 
-
-const getPhotographers = async () => {
-
-    let photographers = null
-
-    await fetch(dataUrl)
-    .then(res => {
-        return res.json()
-    })
-    .then(data => {
-        photographers = data.photographers
-    });
-
-    return photographers
-}
-
 const getPhotographerById = async (id) => {
-    const photographers = await getPhotographers();
+    const photographers = await getData('photographers');
     return photographers.find(obj => obj.id == id);
-}
-
-const getImagesByPhotographerId = async (id) => {
-    console.log(id);
-
-    let photographers = null
-    await fetch(dataUrl)
-    .then(res => {
-        return res.json()
-    })
-    .then(data => {
-        photographers = data.photographers
-    });
-
-    console.log(photographers);
 }
 
 const getMediaByUserId = async (id) => {
 
-    const data = await getData()
-    let media = [];
+    const data = await getData('media')
+    let docs = [];
 
-    for(let i = 0; i < data.media.length; i++) {
+    for(let i = 0; i < data.length; i++) {
 
-        if(data.media[i].photographerId == parseInt(id)) {
+        if(data[i].photographerId == parseInt(id)) {
 
-            media.push(data.media[i]);
+            docs.push(data[i]);
         }
     }
-    return media
+
+    return docs
 }
  
 
-export  { getData, getPhotographers,getPhotographerById, getMediaByUserId }
+export  { getData, getPhotographerById, getMediaByUserId }
 
 
 

@@ -1,4 +1,4 @@
-import { getPhotographers } from '../tools/getData.js'
+import { getData } from '../tools/getData.js';
 import { domElements } from '../dom/domElements.js';
 
 //create cards for every photographer and appends in the photographerSection
@@ -38,7 +38,7 @@ const createUserCards = (photographers) => {
 
 const initiateHomepage = async () => {
 
-    let photographers = await getPhotographers();
+    let photographers = await getData('photographers');
 
     const cardList = createUserCards(photographers);
     for (let i = 0; i < cardList.length; i++) {

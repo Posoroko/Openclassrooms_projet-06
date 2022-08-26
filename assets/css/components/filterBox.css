@@ -1,0 +1,51 @@
+.filterBox {
+    margin: 50px 100px;
+    display: flex;
+    position: relative;
+}
+.filterBox .text {
+    padding: 8px 12px;
+}
+
+.filterDropDownMenu {
+    color: white;
+    background-color: var(--red);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.filterOption {
+    padding: 8px 48px 8px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filterOption:hover {
+    background-color: var(--darkred);
+}
+
+.filterOption:nth-child(2) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.expandMore {
+    font-size: 20px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.arrowDown {
+    transform: rotateZ(0deg);
+}
+
+.arrowUp {
+    transform: rotateZ(180deg);
+}

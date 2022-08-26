@@ -1,11 +1,13 @@
 @import url("./abstracts/variables.css");
 @import url("./components/banner.css");
 
-
-
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    position: relative;
 }
 
 h1 {
@@ -25,3 +27,11 @@ h1 {
     margin-top: 100px;
 }
 
+.icon {
+    font-family: 'Material Symbols Outlined';
+    cursor: pointer;
+}
+
+.r {
+    border: 1px solid red;
+}

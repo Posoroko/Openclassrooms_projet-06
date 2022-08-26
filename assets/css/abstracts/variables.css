@@ -1,6 +1,8 @@
 :root {
+    --pink: #db8876;
     --darkpink: #D3573C;
     --red: #901C1C;
+    --darkred: #641414;
     --lightgray: #eaeaea;
     --shadow: 2px 2px 4px rgb(0, 0, 0);
 }

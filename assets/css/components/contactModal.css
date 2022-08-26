@@ -1,0 +1,84 @@
+.dialog {
+    width: 50%;
+    background-color: #DB8876;
+    padding: 35px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 12px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialog header {
+    width: 100%;
+    position: relative;
+}
+
+.dialog header .modalTitle {
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 30px;
+    margin-top: 7px;
+}
+
+form div {
+    width: 100%;
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    padding-left: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+form input:focus {
+    outline: 3px solid var(--darkred);
+}
+
+form textarea {
+    width: 100%;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+}
+
+form textarea:focus {
+    outline: 3px solid var(--darkred);
+}
+
+.closeButton {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
