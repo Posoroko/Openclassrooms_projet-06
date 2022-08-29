@@ -21,13 +21,25 @@ const filterBoxNodes = {
     filter_title: document.getElementById('filter_title')
 }
 
-const contactModal = {
-    dialog: document.getElementById('contact_modal'),
-    closeButton: document.getElementById('closeModalButton'),
-    name: document.getElementById('photographerName'),
-    submit: document.getElementById('submitButton'),
-    form: document.getElementById('contactForm')
+const mediaModal = {
+    dialog: document.getElementById('mediaModal'),
+    box: document.getElementById('mediaBox')
+}
+
+const modalElements = {
+    dialogs: document.querySelectorAll('.modal'),
+    closeButtons: document.querySelectorAll('.closeButton'),
+    contactModal: {
+        dialog: document.getElementById('contactModal'),
+        name: document.getElementById('photographerName'),
+        submit: document.getElementById('submitButton'),
+        form: document.getElementById('contactForm')
+    },
+    mediaModal: {
+        dialog: document.getElementById('mediaModal'),
+        mediaBox: document.getElementById('mediaBox')
+    }
 }
 
 
-export { domElements, photographerPageNodes, filterBoxNodes, contactModal }
+export { domElements, photographerPageNodes, filterBoxNodes, modalElements }

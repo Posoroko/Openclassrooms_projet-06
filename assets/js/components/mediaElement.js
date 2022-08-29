@@ -1,11 +1,19 @@
 import { createLikeButton } from "./likeButton.js";
 import { mediaBaseUrl } from "../config/config.js";
+import { openMediaModal } from "./modals.js";
 
 const createMediaElement = (media, name) => {
     const figure = document.createElement('figure');
     figure.setAttribute('data-date', media.date);
     figure.setAttribute('data-likes', media.likes);
     figure.setAttribute('data-title', media.title);
+    figure.style.cursor = "pointer";
+    
+    if(media.image) {
+        figure.setAttribute('data-media', media.image);
+    } else {
+        figure.setAttribute('data-media', media.video);
+    }
 
     const div = document.createElement('div');
     div.classList.add('frame');
@@ -21,7 +29,13 @@ const createMediaElement = (media, name) => {
     captionBox.appendChild(createFigCaption(media))
     captionBox.appendChild(createLikeBox(media));
 
+    
+
     figure.appendChild(captionBox);
+
+    figure.addEventListener('click', () => {
+        openMediaModal(div.firstElementChild.cloneNode(true));
+    })
 
     return figure;
 }

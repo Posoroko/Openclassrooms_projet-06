@@ -13,6 +13,7 @@
   <body>
     <header class="header">
       <img src="assets/images/logo.png" class="logo" />
+      <h1 aria-current="page"></h1>
     </header>
 
     <main id="main">
@@ -28,7 +29,7 @@
         </div>
 
         <div class="box contactBtnBox boxCenter">
-          <button class="contact_button" id="contact_button" >Contactez-moi</button>
+          <button class="contact_button" id="contact_button" data-modal="contactModal">Contactez-moi</button>
         </div>
 
         <div class="profilePictureBox box boxRight">
@@ -54,8 +55,18 @@
           </header>
 
           <section class="photoCollection" id="photoCollection">
-
+              <!-- Photo collection created by JS -->
           </section>
+
+          <dialog class="mediaModal modal" id="mediaModal" data-modal="mediaModal">
+            <div class="box">
+              <div class="mediaBox" id="mediaBox">
+                  <!-- media injected by JS here -->
+              </div>
+
+              <span class="closeButton icon" id="closeModalButton" data-modal="mediaModal">close</span>
+            </div>
+          </dialog>
 
       </section>
 
@@ -64,33 +75,37 @@
       
     </main>
     
-    <dialog class="dialog" id="contact_modal">
-        <header>
-          <h2 class="modalTitle">Contactez-moi <br>
-              <span id="photographerName"></span>
-          </h2>
-          <span class="closeButton icon" id="closeModalButton">close</span>
-        </header>
+    <dialog class="contactModal modal" id="contactModal" data-modal="contactModal">
 
-        <form class="contactForm" id="contactForm">
-          <div>
-            <label for="firstName">Prénom</label>
-            <input type="text" id="firstName" />
+          <header>
+            <h2 class="modalTitle">Contactez-moi <br>
+                <span id="photographerName"></span>
+            </h2>
+            
+          </header>
+  
+          <form class="contactForm" id="contactForm">
+            <div>
+              <label for="firstName">Prénom</label>
+              <input type="text" id="firstName" />
+  
+              <label for="lastName">Nom</label>
+              <input type="text" id="lastName" />
+  
+              <label for="email">email</label>
+              <input type="text" id="email" />
+  
+              <label for="message">Votre message</label>
+              <textarea name="message" id="message" rows="10"></textarea>
 
-            <label for="lastName">Nom</label>
-            <input type="text" id="lastName" />
+            </div>
 
-            <label for="email">email</label>
-            <input type="text" id="email" />
+            <button class="submitButton">Envoyer</button>
 
-            <label for="message">Votre message</label>
-            <textarea name="message" id="message" rows="10"></textarea>
-          </div>
-
-          <button class="submitButton">Envoyer</button>
+          
         </form>
 
-      
+        <span class="closeButton icon" id="closeModalButton" data-modal="contactModal">close</span>
     </dialog>
 
     <div class="infoBox">

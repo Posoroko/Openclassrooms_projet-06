@@ -3,7 +3,7 @@ import { photographerPageNodes } from "../dom/domElements.js";
 import { createPhotoCollection } from "../components/photoCollection.js";
 import { initiateFilterBox } from "../components/filterBox.js";
 import { setLikesAndDailyRates } from "../tools/totalLikesAndDailyRates.js";
-import { modal } from "../components/contactModal.js";
+import { modals, openContactModal, openMediaModal } from "../components/modals.js";
 
 //handle URL parameters
 
@@ -20,7 +20,8 @@ const medias = await getMediaByUserId(photographerId);
 
 photographerPageNodes.contactButton.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.open();
+    openContactModal();
+    // contactModal.open();
 });
 
 photographerPageNodes.userName.innerText = photographerInfo.name;
@@ -28,7 +29,7 @@ photographerPageNodes.userLocation.innerText = photographerInfo.city + ", " + ph
 photographerPageNodes.usertagLine.innerText = photographerInfo.tagline;
 photographerPageNodes.userName.innerText = photographerInfo.name;
 photographerPageNodes.profilePicture.setAttribute('src', "assets/images/Photographers ID Photos/" + photographerInfo.portrait );
-modal.initiate();
+modals.initiate();
 initiateFilterBox();
 createPhotoCollection(medias, photographerName);
 setLikesAndDailyRates(photographerInfo.price, medias);
