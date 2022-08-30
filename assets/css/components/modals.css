@@ -90,8 +90,6 @@ form textarea:focus {
 }
 
 
-/* imported node in media modal */
-
 #mediaNode {
     max-width: 50vw;
     max-height: 80vh;

@@ -10,8 +10,8 @@
 
 .photoCollection figure .frame,
 .photoCollection figure .frame {
-    width: 23vw;
-    height: 20vw;
+    width: min(400px, 80vw);
+    aspect-ratio: 1/0.9;
 }
 
 .photoCollection figure div .media {

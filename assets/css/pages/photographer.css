@@ -1,71 +1,11 @@
 @import url("../abstracts/variables.css");
+@import url("../components/buttons.css");
 @import url("../components/photoCollection.css");
 @import url("../components/filterBox.css");
 @import url("../components/modals.css");
+@import url("../components/photographerHeader.css");
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    padding: 0 30px;
-    margin: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.photograph-header .box{
-    width: 30%;
-}
-.photograph-header .boxCenter{
-    display: grid;
-    place-items: center;
-}
-.photograph-header .boxRight{
-    display: flex;
-    flex-direction: row-reverse;
-}
 
-.profilePictureFrame {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profilePicture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact_button:hover {
-    background-color: var(--darkred);
-}
-
-.infoBox{
-    font-size: 30px;
-    font-weight: 400;
-    background-color: var(--pink);
-    padding: 15px 30px 5px 30px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: inline-flex;
-    position: sticky;
-    bottom: 0%;
-    left: 80%;
-}
 
 .infoBox p {
     color: black;
