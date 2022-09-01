@@ -3,6 +3,7 @@ const domElements = {
 }
 
 const photographerPageNodes = {
+    photographerPageHeader: document.getElementById('photographerPageHeader'),
     userName: document.getElementById('userName'),
     userLocation: document.getElementById('userLocation'),
     usertagLine: document.getElementById('usertagLine'),

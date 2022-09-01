@@ -2,8 +2,8 @@ import { getPhotographerById, getMediaByUserId } from "../tools/getData.js";
 import { photographerPageNodes } from "../dom/domElements.js";
 import { createPhotoCollection } from "../components/photoCollection.js";
 import { initiateFilterBox } from "../components/filterBox.js";
-import { setLikesAndDailyRates } from "../tools/totalLikesAndDailyRates.js";
-import { modals, openContactModal, openMediaModal } from "../components/modals.js";
+import { setLikesAndDailyRates, setAriaLabelForTotalLikes } from "../tools/totalLikesAndDailyRates.js";
+import { modals, openContactModal } from "../components/modals.js";
 
 //handle URL parameters
 
@@ -18,10 +18,11 @@ const medias = await getMediaByUserId(photographerId);
 
 // initiate page
 
+photographerPageNodes.photographerPageHeader.setAttribute("aria-label", "Bienvenue sur la page de " + photographerName)
+photographerPageNodes.contactButton.setAttribute("aria-label", "cliquez ici pour contacter " + photographerName)
 photographerPageNodes.contactButton.addEventListener('click', (e) => {
     e.preventDefault();
     openContactModal();
-    // contactModal.open();
 });
 
 photographerPageNodes.userName.innerText = photographerInfo.name;
@@ -33,6 +34,7 @@ modals.initiate();
 initiateFilterBox();
 createPhotoCollection(medias, photographerName);
 setLikesAndDailyRates(photographerInfo.price, medias);
+setAriaLabelForTotalLikes(photographerName)
 
 document.title = photographerName;
 

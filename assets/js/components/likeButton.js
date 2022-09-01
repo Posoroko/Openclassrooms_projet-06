@@ -2,6 +2,7 @@ import { photographerPageNodes } from "../dom/domElements.js";
 
 const createLikeButton = (id) => {
     const heart = document.createElement('p');
+    heart.setAttribute('tabindex', "0");
     heart.classList.add('heart', "icon", "heartEmpty");
     heart.setAttribute('name', id);
 

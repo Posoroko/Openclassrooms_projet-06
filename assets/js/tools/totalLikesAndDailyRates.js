@@ -15,4 +15,8 @@ const setLikesAndDailyRates = (rate, medias) => {
     photographerPageNodes.dailyRate.innerText = rate + "€/jour";
 }
 
-export { setLikesAndDailyRates }
+const setAriaLabelForTotalLikes = (name) => {
+    photographerPageNodes.totalLikes.setAttribute("aria-label", "nombre total de likes pour " + name)
+}
+
+export { setLikesAndDailyRates, setAriaLabelForTotalLikes }

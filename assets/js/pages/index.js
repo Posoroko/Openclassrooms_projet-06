@@ -17,15 +17,21 @@ const createUserCards = (photographers) => {
     for(let i = 0; i < photographers.length; i++) {
         const article = document.createElement( 'article' );
         article.classList.add('userCard');
+        article.setAttribute('tabindex', "0")
+        article.setAttribute("aria-label", "Lien pour visiter la page de " + photographers[i].name)
+        article.setAttribute("aria-role", "link")
         article.id = photographers[i].id
         article.setAttribute('name', photographers[i].name);
         article.addEventListener('click', goToPhotographersPage )
         const div = document.createElement('div');
+        article.setAttribute('tabindex', "-1")
         div.classList.add('imgBox')
         const img = document.createElement( 'img' );
+        img.setAttribute("tabindex", "-1")
         img.setAttribute("src", imagePath + photographers[i].portrait)
         img.setAttribute("alt", "Portrait de" + photographers[i].name)
         const h2 = document.createElement( 'h2' );
+        h2.setAttribute("tabindex", "-1")
         h2.textContent = photographers[i].name;
         article.appendChild(div)
         div.appendChild(img);

@@ -81,13 +81,7 @@ form textarea:focus {
     outline: 3px solid var(--darkred);
 }
 
-.closeButton {
-    font-size: 60px;
-    color: white;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
+
 
 
 #mediaNode {

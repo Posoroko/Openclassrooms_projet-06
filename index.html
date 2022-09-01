@@ -14,13 +14,15 @@
   </head>
   
   <body>
-    <header class="header">
-        <img src="assets/images/logo.png" class="logo" />
+    <header class="header" tabindex="0">
+        <img src="assets/images/logo.png" class="logo"  tabindex="0"/>
     
-        <h1>Nos photographes</h1>
+        <h1 tabindex="-1">Nos photographes</h1>
     </header>
     <main id="main">
-        <div class="photographer_section" id="photographer_section"></div>
+        <div class="photographer_section" id="photographer_section" aria-label="liste des photographes présents sur la plateforme" tabindex="0">
+          <!-- photographer list injected here by JS -->
+        </div>
     </main>
     
     <script type="module" src="assets/js/main.js"></script>

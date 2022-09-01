@@ -11,60 +11,61 @@
   </head>
 
   <body>
-    <header class="header">
-      <img src="assets/images/logo.png" class="logo" />
-      <h1 aria-current="page"></h1>
+    <header class="header" id="photographerPageHeader" tabindex="0">
+      <a href="index.html" tabindex="0" aria-label="logo Fisheye, lien ver la page d'accueil">
+        <img src="assets/images/logo.png" id="photographerPageLogo" class="logo" tabindex="-1"/>
+      </a>
     </header>
 
     <main id="main">
       
 
-      <div class="photograph-header">
-        <div class="userInfoBox box boxLeft">
-          <h1 class="userName" id="userName"></h1>
+      <div class="photograph-header" tab-index="-1">
+        <div class="userInfoBox box boxLeft" tab-index="-1">
+          <h1 class="userName" id="userName" tabindex="0"></h1>
   
-          <address class="userLocation" id="userLocation"></address>
+          <address class="userLocation" id="userLocation" tabindex="0"></address>
   
-          <q class="usertagLine" id="usertagLine"></q>
+          <q class="usertagLine" id="usertagLine" tabindex="0"></q>
         </div>
 
-        <div class="box contactBtnBox boxCenter">
-          <button class="contact_button" id="contact_button" data-modal="contactModal">Contactez-moi</button>
+        <div class="box contactBtnBox boxCenter" tab-index="-1">
+          <button class="contact_button" id="contact_button" data-modal="contactModal" tabindex="0">Contactez-moi</button>
         </div>
 
-        <div class="profilePictureBox box boxRight">
-          <figure class="profilePictureFrame">
-            <img class="profilePicture" id="profilePicture" src="" alt="">
+        <div class="profilePictureBox box boxRight" tab-index="-1">
+          <figure class="profilePictureFrame" tab-index="-1">
+            <img class="profilePicture" id="profilePicture" src="" alt="" tabindex="0">
           </figure>
         </div>
       </div>
 
-      <section class="photoCollection">
-          <header class="photoCollectionHeader">
-              <span class="filterBox">
+      <section class="photoCollection" tab-index="-1">
+          <header class="photoCollectionHeader" tab-index="-1">
+              <span class="filterBox" tab-index="-1">
 
-                  <span class="text">trier par:</span>
-                  <span class="filterDropDownMenu" id="filterDropDownMenu">
-                    <div class="filterOption" id="filter_likes">popularité</div>
-                    <div class="filterOption" id="filter_date">date</div>
-                    <div class="filterOption" id="filter_title">titre</div>
-                    <span class="icon expandMore arrowDown" id="expandMore">expand_more</span>
+                  <span class="text" tabindex="0" aria-label="option de tri des images">trier par:</span>
+                  <span class="filterDropDownMenu" id="filterDropDownMenu" tab-index="-1">
+                    <div class="filterOption" id="filter_likes" aria-label="trier les images par popularité"  tabindex="0">popularité</div>
+                    <div class="filterOption" id="filter_date" aria-label="trier les images par date de parution"tabindex="0" >date</div>
+                    <div class="filterOption" id="filter_title" aria-label="trier les images par titre">titre</div>
+                    <span class="icon expandMore arrowDown" id="expandMore" tab-index="-1">expand_more</span>
                   </span>
 
                 </span>
           </header>
 
-          <section class="photoCollection" id="photoCollection">
+          <section class="photoCollection" id="photoCollection" tabindex="0">
               <!-- Photo collection created by JS -->
           </section>
 
           <dialog class="mediaModal modal" id="mediaModal" data-modal="mediaModal">
-            <div class="box">
-              <div class="mediaBox" id="mediaBox">
+            <div class="box" tabindex="-1">
+              <div class="mediaBox" id="mediaBox" tabindex="-1">
                   <!-- media injected by JS here -->
               </div>
 
-              <span class="closeButton icon" id="closeModalButton" data-modal="mediaModal">close</span>
+              <button class="closeButton icon" id="closeModalButton" data-modal="mediaModal" tabindex="0" aria-label="fermer la photo">close</button>
             </div>
           </dialog>
 
@@ -75,45 +76,45 @@
       
     </main>
     
-    <dialog class="contactModal modal" id="contactModal" data-modal="contactModal">
+    <dialog class="contactModal modal" id="contactModal" data-modal="contactModal" tabindex="-1">
 
           <header>
-            <h2 class="modalTitle">Contactez-moi <br>
-                <span id="photographerName"></span>
+            <h2 class="modalTitle" tabindex="0">Contactez-moi <br>
+                <span id="photographerName" tabindex="0"></span>
             </h2>
             
           </header>
   
           <form class="contactForm" id="contactForm">
             <div>
-              <label for="firstName">Prénom</label>
-              <input type="text" id="firstName" />
+              <label for="firstName" tabindex="-1">Prénom</label>
+              <input type="text" id="firstName" tabindex="0" />
   
-              <label for="lastName">Nom</label>
-              <input type="text" id="lastName" />
+              <label for="lastName" tabindex="-1">Nom</label>
+              <input type="text" id="lastName"  tabindex="0"/>
   
-              <label for="email">email</label>
-              <input type="text" id="email" />
+              <label for="email" tabindex="-1">email</label>
+              <input type="text" id="email"  tabindex="0"/>
   
-              <label for="message">Votre message</label>
-              <textarea name="message" id="message" rows="10"></textarea>
+              <label for="message" tabindex="-1">Votre message</label>
+              <textarea name="message" id="message" rows="10" tabindex="0"></textarea>
 
             </div>
 
-            <button class="submitButton">Envoyer</button>
+            <button class="submitButton" tabindex="0">Envoyer</button>
 
           
         </form>
 
-        <span class="closeButton icon" id="closeModalButton" data-modal="contactModal">close</span>
+        <span class="closeButton icon" id="closeModalButton" data-modal="contactModal" tabindex="0">close</span>
     </dialog>
 
     <div class="infoBox">
       <p class="likeBox">
-        <span id="totalLikes">123456</span>
-        <span class="heart heartFull icon">favorite</span>
+        <span id="totalLikes" tabindex="0"></span>
+        <span class="heart heartFull icon" tabindex="-1">favorite</span>
       </p>
-      <p id="dailyRate"></p>
+      <p id="dailyRate"  tabindex="0" aria-label="prix journalier de ce photographe"></p>
     </div>
 
     <script type="module" src="/assets/js/pages/photographer.js"></script>

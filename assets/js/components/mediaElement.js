@@ -4,6 +4,7 @@ import { openMediaModal } from "./modals.js";
 
 const createMediaElement = (media, name) => {
     const figure = document.createElement('figure');
+    figure.setAttribute('tabindex', "-1")
     figure.setAttribute('data-date', media.date);
     figure.setAttribute('data-likes', media.likes);
     figure.setAttribute('data-title', media.title);
@@ -42,6 +43,7 @@ const createMediaElement = (media, name) => {
 
 const createVideoElement = (media, name) => {
     const video = document.createElement('video');
+    video.setAttribute('tabindex', "0")
     video.controls = true;
     video.id = "media" + media.id;
     const source = document.createElement('source');
@@ -53,6 +55,7 @@ const createVideoElement = (media, name) => {
 
 const createImgElement = (media, name) => {
     const img = document.createElement('img');
+    img.setAttribute('tabindex', "0")
     img.id = "media" + media.id;
     img.classList.add('media');
     img.setAttribute('src', mediaBaseUrl + "/" + name + "/" + media.image);
@@ -62,6 +65,7 @@ const createImgElement = (media, name) => {
 
 const createFigCaption = (media) => {
     const figcaption = document.createElement('figcaption');
+    figcaption.setAttribute('tabindex', "0")
     figcaption.innerText = media.title;
 
     return figcaption;
@@ -72,6 +76,7 @@ const createLikeBox = (media) => {
         likeBox.classList.add('likeBox');
 
         const likeCounter = document.createElement('p');
+        likeCounter.setAttribute('tabindex', "0")
         likeCounter.id = 'likeCounter' + media.id;
         likeCounter.innerText = media.likes;
 
