@@ -1,6 +1,6 @@
 import { photographerPageNodes } from "../dom/domElements.js";
 
-
+let arrayOfMediaCards = [];
 
 const filterPhotoCollection = (choice) => {
 
@@ -13,6 +13,9 @@ const filterPhotoCollection = (choice) => {
     
     do {
         isSortingDone = bubbleSort(parent, children, filter);
+        if(isSortingDone) {
+            arrayOfMediaCards = parent.children;
+        }
     } while(isSortingDone == false) 
 
 }
@@ -79,5 +82,4 @@ const setFilteringAttribute = (filter) => {
 }
 
 
-
-export { filterPhotoCollection }
+export { filterPhotoCollection, arrayOfMediaCards }

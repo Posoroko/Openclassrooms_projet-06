@@ -18,10 +18,13 @@
 /* modal close button */
 .closeButton {
     font-size: 60px;
-    color: white;
     background-color: transparent;
     border: none;
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+.contactModal .closeButton {
+    color: white;
 }

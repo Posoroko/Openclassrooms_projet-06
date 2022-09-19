@@ -109,11 +109,35 @@
         <span class="closeButton icon" id="closeModalButton" data-modal="contactModal" tabindex="0">close</span>
     </dialog>
 
+      
+
+    <dialog  class="modal lightbox" id="lightbox">
+      <!-- <div class="lightboxContent"> -->
+        <p class="icon arrow arrowOn" id="leftArrow">chevron_left</p>
+
+        <figure class="imageBox">
+          <div class="lightboxFrame" id="lightboxFrame">
+            <!-- javascript injects cloned media element here -->
+          </div>
+          <figcaption>
+              <p class="lightboxTitle" id="lightboxTitle">
+                <!-- javascript injects title here -->
+              </p>
+          </figcaption>
+        </figure>
+
+        <p class="icon arrow arrowOn" id="rightArrow">chevron_right</p>
+      <!-- </div> -->
+
+      <span class="closeButton closeLightboxButton icon" id="closeLightboxButton" data-modal="lightbox" tabindex="0">close</span>
+    </dialog>
+
     <div class="infoBox">
       <p class="likeBox">
         <span id="totalLikes" tabindex="0"></span>
         <span class="heart heartFull icon" tabindex="-1">favorite</span>
       </p>
+
       <p id="dailyRate"  tabindex="0" aria-label="prix journalier de ce photographe"></p>
     </div>
 

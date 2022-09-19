@@ -39,6 +39,15 @@ const modalElements = {
     mediaModal: {
         dialog: document.getElementById('mediaModal'),
         mediaBox: document.getElementById('mediaBox')
+    },
+    lightbox: {
+        dialog: document.getElementById('lightbox'),
+        image: document.getElementById('lightboxImg'),
+        frame: document.getElementById('lightboxFrame'),
+        title: document.getElementById('lightboxTitle'),
+        close: document.getElementById('closeLightboxButton'),
+        rightArrow: document.getElementById('rightArrow'),
+        leftArrow: document.getElementById('leftArrow'),
     }
 }
 

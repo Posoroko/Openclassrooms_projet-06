@@ -5,6 +5,7 @@ import { initialImageSorting } from "../config/config.js";
 import { createMediaElement } from "./mediaElement.js";
 
 const createPhotoCollection = (media, name) => {
+
     const collection = photographerPageNodes.photoCollection;
  
     for(let i = 0; i < media.length; i++) {
