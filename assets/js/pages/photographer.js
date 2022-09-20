@@ -27,7 +27,7 @@ photographerPageNodes.contactButton.addEventListener('click', (e) => {
 
 photographerPageNodes.userName.innerText = photographerInfo.name;
 photographerPageNodes.userLocation.innerText = photographerInfo.city + ", " + photographerInfo.country;
-photographerPageNodes.usertagLine.innerText = photographerInfo.tagline;
+photographerPageNodes.userTagline.innerText = photographerInfo.tagline;
 photographerPageNodes.userName.innerText = photographerInfo.name;
 photographerPageNodes.profilePicture.setAttribute('src', "assets/images/Photographers ID Photos/" + photographerInfo.portrait );
 modals.initiate();

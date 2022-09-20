@@ -6,8 +6,32 @@
 @import url("../components/photographerHeader.css");
 
 
+.photographer_section {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 450px) );
+    gap: 70px;
+    margin-top: 100px;
+}
 
-.infoBox p {
+.infoBox{
+    font-size: 22px;
+    font-weight: 400;
+    background-color: var(--pink);
+    padding: 15px 30px 10px 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: inline-flex;
+    position: sticky;
+    bottom: 0%;
+    left: 80%;
+}
+
+.infoBox .likeBox {
     color: black;
-    margin: 8px 12px;
+}
+
+.infoBox .likeBox .heart{
+    margin-right: 50px;
+    cursor: auto;
 }

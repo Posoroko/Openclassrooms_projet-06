@@ -14,9 +14,9 @@ const createMediaElement = (media, name) => {
     figure.style.cursor = "pointer";
     
     if(media.image) {
-        figure.setAttribute('data-media', media.image);
+        figure.setAttribute('data-media', "image");
     } else {
-        figure.setAttribute('data-media', media.video);
+        figure.setAttribute('data-media', "video");
     }
 
     const div = document.createElement('div');
@@ -53,7 +53,6 @@ const createVideoElement = (media, name) => {
 
     video.setAttribute('tabindex', "0");
     video.controls = false;
-    // video.id = "media" + media.id;
     video.classList.add("media");
     const source = document.createElement('source');
     source.setAttribute('src', mediaBaseUrl + "/" + name + "/" + media.video);

@@ -31,17 +31,18 @@
     object-fit: cover;
 }
 
-.infoBox{
-    font-size: 30px;
-    font-weight: 400;
-    background-color: var(--pink);
-    padding: 15px 30px 5px 30px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: inline-flex;
-    position: sticky;
-    bottom: 0%;
-    left: 80%;
+.userName {
+    color: var(--red);
+    margin-right: 100px;
+}
+
+.userLocation {
+    font-style: normal;
+    color: var(--darkred);
+}
+
+.userTagline {
+    line-height: 50px;
 }
 
 @media (max-width: 899px) { 

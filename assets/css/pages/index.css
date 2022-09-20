@@ -1,1 +1,19 @@
 @import url("../components/photographerCard.css");
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.nosPhotographes {
+    color: var(--red);
+}
+
+.photographer_section {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 450px) );
+    gap: 70px;
+    margin-top: 100px;
+}

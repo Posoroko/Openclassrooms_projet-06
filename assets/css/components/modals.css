@@ -1,14 +1,15 @@
 dialog {
-    
     border: none;
     border-radius: 5px;
+    
     box-shadow: 0px 2px 12px black;
+    margin: auto;
 }
 
 .contactModal {
-    padding: 60px;
     width: 50%;
     background-color: #DB8876;
+    padding: 20px 30px;
 }
 
 .contactModal .box{
@@ -28,10 +29,10 @@ dialog {
     position: relative;
 }
 
-dialog .box header .modalTitle {
+dialog header .modalTitle {
     font-size: 50px;
+    line-height: 60px;
     font-weight: normal;
-    margin: 0;
 }
 
 form {
@@ -82,26 +83,31 @@ form textarea:focus {
     outline: 3px solid var(--darkred);
 }
 
-#mediaNode {
-    max-width: 50vw;
-    max-height: 80vh;
-    
+.lightbox {
+    padding: 30px;
 }
 
-.lightBox {
+.lightBox .content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.lightbox .lightboxFrame img {
-    width: min(80vw, 400px);
+.lightboxFrame .media {
+    max-width: 50vw;
+    max-height: 80vh;
+}
 
+.lightboxTitle {
+    color: var(--red);
+    font-size: 22px;
+    margin-top: 10px;
 }
 
 .arrow {
     font-size: 50px;
-    color: var(--darkred);
+    font-weight: 700;
+    color: var(--red);
     user-select: none;
 }
 .arrowOn {

@@ -6,7 +6,7 @@ const photographerPageNodes = {
     photographerPageHeader: document.getElementById('photographerPageHeader'),
     userName: document.getElementById('userName'),
     userLocation: document.getElementById('userLocation'),
-    usertagLine: document.getElementById('usertagLine'),
+    userTagline: document.getElementById('userTagline'),
     profilePicture: document.getElementById('profilePicture'),
     photoCollection: document.getElementById('photoCollection'),
     totalLikes: document.getElementById('totalLikes'),

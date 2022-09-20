@@ -7,31 +7,19 @@ const modals = {
 
         modalElements.lightbox.leftArrow.addEventListener('click', navigateMedia);
         modalElements.lightbox.rightArrow.addEventListener('click', navigateMedia);
+        // modalElements.lightbox.dialog.close();
 
         //close when click on close button
         modalElements.closeButtons.forEach(button => {
             button.addEventListener('click', modals.close);
         });
-
-        //close modal when clicking on backdrop
-        // modalElements.dialogs.forEach(dialog => {
-            
-        //     dialog.addEventListener('click', (e) => {
-        //         let rect = dialog.getBoundingClientRect();
-        //         let isInDialog=(rect.top <= e.clientY && e.clientY <= rect.top + rect.height
-        //           && rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
-        //         if (!isInDialog) {
-        //             modals.close(e);
-        //         }
-        //     });
-        // })      
+   
     },
 
     close: (e) => {
 
         const modal = e.target.parentElement;
         if(e.target.getAttribute('data-modal') == "lightbox") {
-
 
             modal.querySelector('.media').remove();
         }
@@ -70,7 +58,13 @@ const openLightbox = (targetCard) => {
 
 const loadNewMediaInLightbox = (newCard) => {
 
-    const newMedia = newCard.querySelector('.media').cloneNode();
+    
+
+    const newMedia = newCard.querySelector('.media').cloneNode(true);
+
+    if(newCard.getAttribute('data-media')) {
+        toggleVideoControls(newMedia);
+    }
 
     //check if lightbox is already on
     if( modalElements.lightbox.dialog.querySelector('.media')) {
@@ -85,9 +79,6 @@ const loadNewMediaInLightbox = (newCard) => {
 
     modalElements.lightbox.title.innerText = newCard.getAttribute("data-title");
 }   
-
-
-
 
 const navigateMedia = (e) => {
 
@@ -111,9 +102,6 @@ const navigateMedia = (e) => {
 
 const toggleArrrows = () => {
 
-    console.log(arrayOfMediaCards.length);
-    console.log(indexOfCurrentloadedMedia);
-
     if(indexOfCurrentloadedMedia > 0 && indexOfCurrentloadedMedia < arrayOfMediaCards.length - 1) {
         
         modalElements.lightbox.leftArrow.classList.replace('arrowOff', 'arrowOn');
@@ -133,4 +121,9 @@ const toggleArrrows = () => {
     }
 
 }
+
+const toggleVideoControls = (video) => {
+    video.controls = !video.controls;
+}
+
 export { modals, openContactModal, openLightbox };
