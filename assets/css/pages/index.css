@@ -1,19 +1,56 @@
 @import url("../components/photographerCard.css");
 
-.logo {
-    height: 50px;
-    margin-left: 100px;
-    cursor: pointer;
+.header {
+    margin-bottom: clamp(40px, 5vw, 70px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .nosPhotographes {
+    font-size: clamp(18px, 2vw, 40px);
     color: var(--red);
 }
 
 .photographer_section {
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 450px) );
-    gap: 70px;
-    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
+
+.userCard {
+    display: flex;
+    margin-bottom: clamp(30px, 1.5vw, 50px);
+}
+
+@media (max-width: 750px) {
+    .photographer_section {
+        justify-content: space-evenly;
+    }
+
+    .userCard {
+        width: min(204px, 100%);
+    }
+}
+
+@media (min-width: 751px){
+    .photographer_section {
+        justify-content: space-between;
+    }
+    .userCard {
+        flex-basis: 30%;
+    }
+    .userCard:nth-child(3n+1) {
+        justify-content: flex-start;
+    }
+    .userCard:nth-child(3n+2) {
+        justify-content: center;
+    }
+    .userCard:nth-child(3n+3) {
+        justify-content: flex-end;
+    }
+}
+

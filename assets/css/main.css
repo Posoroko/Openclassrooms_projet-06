@@ -1,5 +1,4 @@
 @import url("./abstracts/variables.css");
-@import url("./components/banner.css");
 
 * {
     box-sizing: border-box;
@@ -7,9 +6,16 @@
     margin: 0;
 }
 body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5vw;
     font-family: "DM Sans", sans-serif;
-    margin: 0;
     position: relative;
+}
+
+.logo {
+    width: clamp(100px, 20vw, 300px);
+    cursor: pointer;
 }
 
 .icon {

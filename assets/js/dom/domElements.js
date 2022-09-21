@@ -17,9 +17,9 @@ const photographerPageNodes = {
 const filterBoxNodes = {
     dropDown: document.getElementById('filterDropDownMenu'),
     chevron: document.getElementById('expandMore'),
-    filter_likes: document.getElementById('filter_likes'),
-    filter_date: document.getElementById('filter_date'),
-    filter_title: document.getElementById('filter_title')
+    filter_likes: document.getElementById('filterBox-1'),
+    filter_date: document.getElementById('filterBox-2'),
+    filter_title: document.getElementById('filterBox-3')
 }
 
 const mediaModal = {
@@ -46,8 +46,8 @@ const modalElements = {
         frame: document.getElementById('lightboxFrame'),
         title: document.getElementById('lightboxTitle'),
         close: document.getElementById('closeLightboxButton'),
-        rightArrow: document.getElementById('rightArrow'),
-        leftArrow: document.getElementById('leftArrow'),
+        rightArrow: document.getElementById('ArrowRight'),
+        leftArrow: document.getElementById('ArrowLeft'),
     }
 }
 

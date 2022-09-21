@@ -5,6 +5,7 @@ import { openLightbox } from "./modals.js"
 
 const createMediaElement = (media, name) => {
     const figure = document.createElement('figure');
+    figure.classList.add('mediaCard');
     figure.setAttribute('tabindex', "-1")
     figure.setAttribute('data-date', media.date);
     figure.setAttribute('data-likes', media.likes);
@@ -12,39 +13,38 @@ const createMediaElement = (media, name) => {
     figure.setAttribute('data-mediaId', media.id);
     figure.setAttribute('data-mediaTitle', media.title);
     figure.style.cursor = "pointer";
+
+        const mediaContentBox = document.createElement('div');
+        mediaContentBox.classList.add('mediaContentBox');
+
+            const frame = document.createElement('div');
+            frame.classList.add('frame');
     
-    if(media.image) {
-        figure.setAttribute('data-media', "image");
-    } else {
-        figure.setAttribute('data-media', "video");
-    }
-
-    const div = document.createElement('div');
-    div.classList.add('frame');
-    
-    figure.appendChild(div);
-
-    if (isMediaVideo(media)) {
-        div.appendChild(createVideoElement(media, name));
-        div.style.position = "relative";
-            
-        div.appendChild(videoPlayButton());
-    } else {
-        div.appendChild(createImgElement(media, name));
-    }
-    const captionBox = document.createElement('div');
-    captionBox.classList.add('captionBox');
-    captionBox.appendChild(createFigCaption(media))
-    captionBox.appendChild(createLikeBox(media));
-
     
 
-    figure.appendChild(captionBox);
+            if (isMediaVideo(media)) {
+                figure.setAttribute('data-media', "video");
+                frame.appendChild(createVideoElement(media, name));
+                    
+                frame.appendChild(videoPlayButton());
+            } else {
+                figure.setAttribute('data-media', "image");
+                frame.appendChild(createImgElement(media, name));
+            }
+                const captionBox = document.createElement('div');
+                captionBox.classList.add('captionBox');
+                captionBox.appendChild(createFigCaption(media))
+                captionBox.appendChild(createLikeBox(media));
 
-    figure.addEventListener('click', (e) => {
-        openLightbox(e.currentTarget);
-    })
+    
+        mediaContentBox.appendChild(frame)
+        mediaContentBox.appendChild(captionBox);
 
+        mediaContentBox.addEventListener('click', (e) => {
+            openLightbox(e.currentTarget);
+        })
+
+    figure.appendChild(mediaContentBox);
     return figure;
 }
 
@@ -103,17 +103,9 @@ const isMediaVideo = (obj) => {
 
 const videoPlayButton = () => {
     const playBtn = document.createElement('span');
+    playBtn.classList.add('playBtn');
     playBtn.classList.add("icon");
     playBtn.innerText = "play_circle";
-    playBtn.style.cssText = `
-        color: black;
-        font-size: 60px;
-        opacity: 0.6;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    `;
 
     return playBtn;
 }

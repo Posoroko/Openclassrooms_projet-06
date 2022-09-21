@@ -18,8 +18,6 @@ const medias = await getMediaByUserId(photographerId);
 
 // initiate page
 
-photographerPageNodes.photographerPageHeader.setAttribute("aria-label", "Bienvenue sur la page de " + photographerName)
-photographerPageNodes.contactButton.setAttribute("aria-label", "cliquez ici pour contacter " + photographerName)
 photographerPageNodes.contactButton.addEventListener('click', (e) => {
     e.preventDefault();
     openContactModal();
@@ -29,7 +27,8 @@ photographerPageNodes.userName.innerText = photographerInfo.name;
 photographerPageNodes.userLocation.innerText = photographerInfo.city + ", " + photographerInfo.country;
 photographerPageNodes.userTagline.innerText = photographerInfo.tagline;
 photographerPageNodes.userName.innerText = photographerInfo.name;
-photographerPageNodes.profilePicture.setAttribute('src', "assets/images/Photographers ID Photos/" + photographerInfo.portrait );
+photographerPageNodes.profilePicture.setAttribute('src', "../assets/images/Photographers ID Photos/" + photographerInfo.portrait );
+photographerPageNodes.profilePicture.setAttribute('alt', photographerInfo.name);
 modals.initiate();
 initiateFilterBox();
 createPhotoCollection(medias, photographerName);

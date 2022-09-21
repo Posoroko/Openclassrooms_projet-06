@@ -8,7 +8,6 @@ const filterPhotoCollection = (choice) => {
     const children = parent.children;
     const filter = setFilteringAttribute(choice);
 
-
     let isSortingDone = false;
     
     do {
@@ -73,11 +72,11 @@ const bubbleSort = (parent, children, filter) => {
 const setFilteringAttribute = (filter) => {
     switch(filter) {
 
-        case "filter_likes": return "data-likes";
+        case "filterBox-1": return "data-likes";
 
-        case "filter_date": return "data-date";
+        case "filterBox-2": return "data-date";
 
-        case "filter_title": return "data-title";
+        case "filterBox-3": return "data-title";
     }
 }
 

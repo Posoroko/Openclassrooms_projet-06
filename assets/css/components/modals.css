@@ -7,7 +7,7 @@ dialog {
 }
 
 .contactModal {
-    width: 50%;
+    width: min(100%, 669px);
     background-color: #DB8876;
     padding: 20px 30px;
 }

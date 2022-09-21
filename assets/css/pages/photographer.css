@@ -5,13 +5,9 @@
 @import url("../components/modals.css");
 @import url("../components/photographerHeader.css");
 
+.portFolio {
+    width: 100%;
 
-.photographer_section {
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 450px) );
-    gap: 70px;
-    margin-top: 100px;
 }
 
 .infoBox{

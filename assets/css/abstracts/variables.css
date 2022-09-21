@@ -4,5 +4,5 @@
     --red: #901C1C;
     --darkred: #641414;
     --lightgray: #757575;
-    --shadow: 2px 2px 4px rgb(0, 0, 0);
+    --shadow: 2px 1px 8px rgba(0, 0, 0, 0.444);
 }

@@ -1,8 +1,8 @@
 .photograph-header {
-    width: min(1700px, 95%);
+    width: 100%;
     background-color: #FAFAFA;
     padding: min(3vw, 50px);
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
     align-items: center;

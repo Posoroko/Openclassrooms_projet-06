@@ -5,14 +5,21 @@ import { arrayOfMediaCards } from "../tools/filterPhotoCollection.js";
 const modals = {
     initiate: () => {
 
-        modalElements.lightbox.leftArrow.addEventListener('click', navigateMedia);
-        modalElements.lightbox.rightArrow.addEventListener('click', navigateMedia);
-        // modalElements.lightbox.dialog.close();
+        modalElements.lightbox.leftArrow.addEventListener('click', (e) => {
+            console.log('click left');
+            navigateMedia(e.target.id);
+        });
+        modalElements.lightbox.rightArrow.addEventListener('click', (e) => {
+            console.log('click right');
+            navigateMedia(e.target.id);
+        });
 
         //close when click on close button
         modalElements.closeButtons.forEach(button => {
             button.addEventListener('click', modals.close);
         });
+
+        
    
     },
 
@@ -47,7 +54,23 @@ let indexOfCurrentloadedMedia = null;
 
 const openLightbox = (targetCard) => {
 
+    const keyDownListener = addEventListener('keydown', (e) => {
+        console.log(e.code);
+        switch(e.code) {
+            
+            case "ArrowRight":
+                navigateMedia(ArrowRight);
+            break;
+
+            case "ArrowLeft":
+                navigateMedia(ArrowLeft);
+            break;
+        }
+    })
+
     indexOfCurrentloadedMedia = Array.from(arrayOfMediaCards).indexOf(targetCard);
+
+    console.log(indexOfCurrentloadedMedia);
 
     loadNewMediaInLightbox(targetCard);
 
@@ -80,18 +103,20 @@ const loadNewMediaInLightbox = (newCard) => {
     modalElements.lightbox.title.innerText = newCard.getAttribute("data-title");
 }   
 
-const navigateMedia = (e) => {
+const navigateMedia = (direction) => {
 
-    switch(e.target.id) {
+    console.log(direction);
 
-        case "rightArrow":
+    switch(direction) {
 
+        case "ArrowRight":
+            console.log('right');
             indexOfCurrentloadedMedia++;
             toggleArrrows();
             break;
 
-        case "leftArrow":
-
+        case "ArrowLeft":
+            console.log('left');
             indexOfCurrentloadedMedia--;
             toggleArrrows();
     }
