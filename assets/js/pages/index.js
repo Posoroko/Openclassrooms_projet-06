@@ -25,10 +25,10 @@ const createUserCards = (photographers) => {
             contentBox.classList.add('contentBox');
 
                 const imgBox = document.createElement('div');
-                imgBox.classList.add('imgBox')
+                imgBox.classList.add('imgBox');
+                imgBox.setAttribute("tabindex"  , "0");
             
                     const img = document.createElement( 'img' );
-                    img.setAttribute("tabindex", "0");
                     img.setAttribute("src", imagePath + photographers[i].portrait);
                     img.setAttribute("alt", photographers[i].name);
                     img.setAttribute('data-userId', photographers[i].id);
@@ -54,15 +54,18 @@ const createUserCards = (photographers) => {
 
                     const p1 = document.createElement('p');
                     p1.classList.add("userLocation");
-                    p1.innerText = `${photographers[i].city}, ${photographers[i].country}`;               
+                    p1.innerText = `${photographers[i].city}, ${photographers[i].country}`;    
+                    p1.setAttribute("tabindex"  , "0");           
 
                     const p2 = document.createElement('p');
                     p2.classList.add("userTagline");
                     p2.innerText = photographers[i].tagline;
+                    p2.setAttribute("tabindex"  , "0");
 
                     const p3 = document.createElement('p');
                     p3.classList.add("userPrice");
-                    p3.innerText = `${photographers[i].price}/jour`;
+                    p3.innerText = `${photographers[i].price}€/jour`;
+                    p3.setAttribute("tabindex"  , "0");
 
                 figCaption.appendChild(h2);
                 figCaption.appendChild(p1);

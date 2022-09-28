@@ -41,7 +41,7 @@ const createMediaElement = (media, name) => {
         mediaContentBox.appendChild(captionBox);
 
         mediaContentBox.addEventListener('click', (e) => {
-            openLightbox(e.currentTarget);
+            openLightbox(e.currentTarget.parentElement);
         })
 
     figure.appendChild(mediaContentBox);

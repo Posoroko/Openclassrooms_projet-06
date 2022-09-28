@@ -14,9 +14,6 @@ const handleClick = (e) => {
 
     changeOrderOfFilterOptions(choice);
     closeMenu();
-    
-    
-
     filterPhotoCollection(choice.id);
 }
 
@@ -49,15 +46,13 @@ const rotateChevron = () => {
 
 const initiateFilterBox = () => {
     filterBoxNodes.dropDown.addEventListener('mouseleave', closeMenu);
+    
     filterBoxNodes.filter_likes.addEventListener('click', handleClick);
     filterBoxNodes.filter_date.addEventListener('click', handleClick);
     filterBoxNodes.filter_title.addEventListener('click', handleClick);
+
     filterBoxNodes.dropDown.style.height = filterBoxNodes.dropDown.firstElementChild.offsetHeight + "px";
-
     filterBoxNodes.dropDown.style.left = filterBoxNodes.dropDown.parentElement.firstElementChild.offsetWidth + "px";
-
-    
-    
 }
 
 export { initiateFilterBox }

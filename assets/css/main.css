@@ -5,10 +5,14 @@
     padding: 0;
     margin: 0;
 }
+*:focus {
+    outline: #901c1c solid 2px;
+    border-radius: 0.25rem;
+}
 body {
     width: 100%;
     min-height: 100vh;
-    padding: 5vw;
+    padding: 5vw 5vw 0 5vw;
     font-family: "DM Sans", sans-serif;
     position: relative;
 }

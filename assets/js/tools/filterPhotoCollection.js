@@ -70,11 +70,13 @@ const bubbleSort = (parent, children, filter) => {
 }
 
 const setFilteringAttribute = (filter) => {
+
+    console.log(filter);
     switch(filter) {
 
-        case "filterBox-1": return "data-likes";
+        case "filterBox-1": return "data-date";
 
-        case "filterBox-2": return "data-date";
+        case "filterBox-2": return "data-likes";
 
         case "filterBox-3": return "data-title";
     }
