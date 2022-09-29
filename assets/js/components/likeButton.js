@@ -4,12 +4,14 @@ const createLikeButton = (id) => {
     const heart = document.createElement('p');
     heart.style.pointerEvents = "auto";
     heart.setAttribute('tabindex', "0");
+    heart.setAttribute('aria-label', "like button");
     heart.classList.add('heart', "icon", "heartEmpty");
     heart.setAttribute('name', id);
 
     heart.innerText = "favorite";
 
-    heart.addEventListener('click', toggleLikeButton)
+    heart.addEventListener('click', toggleLikeButton);
+    heart.addEventListener('keypress', toggleLikeButton);               
 
     return heart;
 }

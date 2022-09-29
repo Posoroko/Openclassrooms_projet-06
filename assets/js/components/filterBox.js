@@ -12,7 +12,7 @@ const handleClick = (e) => {
         return;
     }
 
-    changeOrderOfFilterOptions(choice);
+    // changeOrderOfFilterOptions(choice);
     closeMenu();
     filterPhotoCollection(choice.id);
 }

@@ -10,6 +10,7 @@
 }
 
 .filterDropDownMenu {
+    font-family: ;
     min-height: 35px !important;
     color: white;
     background-color: var(--red);
