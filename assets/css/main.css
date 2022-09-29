@@ -6,8 +6,9 @@
     margin: 0;
 }
 *:focus {
-    outline: #901c1c solid 2px;
+    outline: #5f5f5f solid 2px;
     border-radius: 0.25rem;
+    padding: 5px;
 }
 body {
     width: 100%;

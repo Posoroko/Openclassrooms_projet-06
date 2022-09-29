@@ -16,9 +16,12 @@ const createMediaElement = (media, name) => {
 
         const mediaContentBox = document.createElement('div');
         mediaContentBox.classList.add('mediaContentBox');
+        mediaContentBox.setAttribute('tabindex', "0");
+        mediaContentBox.setAttribute('aria-labelledby', "mediaElementTitle");
 
             const frame = document.createElement('div');
             frame.classList.add('frame');
+            frame.setAttribute('tabindex', "-1");
     
     
 
@@ -43,6 +46,12 @@ const createMediaElement = (media, name) => {
         mediaContentBox.addEventListener('click', (e) => {
             openLightbox(e.currentTarget.parentElement);
         })
+        mediaContentBox.addEventListener('keypress', (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                mediaContentBox.click();
+            }
+        })
 
     figure.appendChild(mediaContentBox);
     return figure;
@@ -51,7 +60,7 @@ const createMediaElement = (media, name) => {
 const createVideoElement = (media, name) => {
     const video = document.createElement('video');
 
-    video.setAttribute('tabindex', "0");
+    video.setAttribute('tabindex', "-1");
     video.controls = false;
     video.classList.add("media");
     const source = document.createElement('source');
@@ -63,7 +72,7 @@ const createVideoElement = (media, name) => {
 
 const createImgElement = (media, name) => {
     const img = document.createElement('img');
-    img.setAttribute('tabindex', "0")
+    img.setAttribute('tabindex', "-1")
     // img.id = "media" + media.id;
     img.classList.add('media');
     img.setAttribute('src', mediaBaseUrl + "/" + name + "/" + media.image);
@@ -75,6 +84,7 @@ const createFigCaption = (media) => {
     const figcaption = document.createElement('figcaption');
     figcaption.setAttribute('tabindex', "0")
     figcaption.innerText = media.title;
+    figcaption.id = "mediaElementTitle";
 
     return figcaption;
 };

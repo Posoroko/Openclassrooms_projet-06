@@ -17,6 +17,10 @@ const handleClick = (e) => {
     filterPhotoCollection(choice.id);
 }
 
+const handleChange = (value) => {
+    filterPhotoCollection(value);
+}
+
 
 const closeMenu = () => {
     if(isMenuOpen) {
@@ -45,6 +49,10 @@ const rotateChevron = () => {
 }
 
 const initiateFilterBox = () => {
+
+    filterBoxNodes.dropDown.addEventListener('change', (e) => {
+        handleChange(e.target.value);    
+    })
     filterBoxNodes.dropDown.addEventListener('mouseleave', closeMenu);
     
     filterBoxNodes.filter_likes.addEventListener('click', handleClick);
