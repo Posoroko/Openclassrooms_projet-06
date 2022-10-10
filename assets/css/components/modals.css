@@ -87,7 +87,7 @@ form textarea:focus {
     padding: 30px;
 }
 
-.lightBox .content{
+.lightbox .content{
     display: flex;
     justify-content: center;
     align-items: center;

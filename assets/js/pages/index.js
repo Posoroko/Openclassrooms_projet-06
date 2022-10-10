@@ -26,9 +26,10 @@ const createUserCards = (photographers) => {
 
                 const imgBox = document.createElement('div');
                 imgBox.classList.add('imgBox');
-                imgBox.setAttribute("tabindex"  , "0");
+                imgBox.setAttribute("tabindex", "-1");
             
                     const img = document.createElement( 'img' );
+                    img.setAttribute("tabindex" , "-1");
                     img.setAttribute("src", imagePath + photographers[i].portrait);
                     img.setAttribute("alt", photographers[i].name);
                     img.setAttribute('data-userId', photographers[i].id);
@@ -44,13 +45,20 @@ const createUserCards = (photographers) => {
 
                 const figCaption = document.createElement('figcaption');
 
-                    const h2 = document.createElement( 'h2' );
-                    h2.setAttribute("tabindex", "-1");
-                    h2.textContent = photographers[i].name;
-                    h2.setAttribute('data-userId', photographers[i].id);
-                    h2.setAttribute('data-userName', photographers[i].name);
-                    h2.setAttribute("aria-role", "link");
-                    h2.addEventListener('click', goToPhotographersPage );
+                    const a = document.createElement( 'a' );
+                    a.setAttribute("tabindex", "0");
+                    a.textContent = photographers[i].name;
+                    a.setAttribute('href', "./pages/photographer.html");
+                    a.setAttribute('data-userId', photographers[i].id);
+                    a.setAttribute('aria-label', photographers[i].name);
+                    a.setAttribute('data-userName', photographers[i].name);
+                    a.setAttribute("aria-role", "button");
+                    a.addEventListener('click', goToPhotographersPage );
+                    a.addEventListener('keypress', (e) => {
+                        e.preventDefault();
+
+                        goToPhotographersPage(e);
+                    })
 
                     const p1 = document.createElement('p');
                     p1.classList.add("userLocation");
@@ -64,10 +72,11 @@ const createUserCards = (photographers) => {
 
                     const p3 = document.createElement('p');
                     p3.classList.add("userPrice");
+                    p3.setAttribute('aria-label', `${photographers[i].price} euro par jour`)
                     p3.innerText = `${photographers[i].price}€/jour`;
                     p3.setAttribute("tabindex"  , "0");
 
-                figCaption.appendChild(h2);
+                figCaption.appendChild(a);
                 figCaption.appendChild(p1);
                 figCaption.appendChild(p2);
                 figCaption.appendChild(p3);

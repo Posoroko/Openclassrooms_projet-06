@@ -23,8 +23,6 @@ const createMediaElement = (media, name) => {
             frame.classList.add('frame');
             frame.setAttribute('tabindex', "-1");
     
-    
-
             if (isMediaVideo(media)) {
                 figure.setAttribute('data-media', "video");
                 frame.appendChild(createVideoElement(media, name));
