@@ -47,18 +47,19 @@ const createUserCards = (photographers) => {
 
                     const a = document.createElement( 'a' );
                     a.setAttribute("tabindex", "0");
+                    a.classList.add('userName');
                     a.textContent = photographers[i].name;
-                    a.setAttribute('href', "./pages/photographer.html");
+                    a.setAttribute('href', "./pages/photographer.html" + "?" + "id=" + photographers[i].id + "&" + "name=" + photographers[i].name);
                     a.setAttribute('data-userId', photographers[i].id);
                     a.setAttribute('aria-label', photographers[i].name);
                     a.setAttribute('data-userName', photographers[i].name);
                     a.setAttribute("aria-role", "button");
-                    a.addEventListener('click', goToPhotographersPage );
-                    a.addEventListener('keypress', (e) => {
-                        e.preventDefault();
+                    // a.addEventListener('click', goToPhotographersPage );
+                    // a.addEventListener('keypress', (e) => {
+                    //     e.preventDefault();
 
-                        goToPhotographersPage(e);
-                    })
+                    //     goToPhotographersPage(e);
+                    // })
 
                     const p1 = document.createElement('p');
                     p1.classList.add("userLocation");

@@ -37,6 +37,12 @@
     text-align: center;
     cursor: pointer;
 }
+.userName {
+    color: var(--red);
+    font-size: 28px;
+    text-decoration: none;
+    margin-top: 20px;
+}
 
 .userCard .contentBox figcaption .userLocation {
     color: var(--darkred);
