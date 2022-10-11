@@ -65,6 +65,7 @@ const createVideoElement = (media, name) => {
     source.setAttribute('src', mediaBaseUrl + "/" + name + "/" + media.video);
     video.classList.add('media');
     video.appendChild(source);
+    video.setAttribute("alt", media.title);
     return video
 }
 
@@ -74,6 +75,7 @@ const createImgElement = (media, name) => {
     // img.id = "media" + media.id;
     img.classList.add('media');
     img.setAttribute('src', mediaBaseUrl + "/" + name + "/" + media.image);
+    img.setAttribute("alt", media.title);
 
     return img;
 };

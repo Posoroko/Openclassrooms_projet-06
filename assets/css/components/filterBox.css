@@ -4,19 +4,20 @@
     display: flex;
     position: relative;
     z-index: 1000;
+    border: 1px solid red;
 }
 .filterBox .text {
     padding: 8px 12px;
 }
 
 .filterDropDownMenu {
-    font-family: ;
+
     min-height: 35px !important;
     color: white;
     background-color: var(--red);
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     border: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -24,21 +25,11 @@
 }
 
 .filterOption {
-    width: 90%;
+    width: 100%;
     padding: 8px 48px 8px 12px;
-    margin: auto;
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.filterOption:hover {
-    background-color: var(--darkred);
-}
-
-.filterOption:nth-child(2) {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
 }
 
 .expandMore {

@@ -37,7 +37,7 @@
     text-align: center;
     cursor: pointer;
 }
-.userName {
+.userName, a {
     color: var(--red);
     font-size: 28px;
     text-decoration: none;

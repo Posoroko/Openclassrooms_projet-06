@@ -24,42 +24,32 @@ const createUserCards = (photographers) => {
             const contentBox = document.createElement('div');
             contentBox.classList.add('contentBox');
 
+            const a = document.createElement( 'a' );
+                a.setAttribute("tabindex", "0");
+                a.setAttribute('href', "./pages/photographer.html" + "?" + "id=" + photographers[i].id + "&" + "name=" + photographers[i].name);
+                a.setAttribute('data-userId', photographers[i].id);
+                a.setAttribute('aria-label', photographers[i].name);
+                a.setAttribute('data-userName', photographers[i].name);
+
                 const imgBox = document.createElement('div');
-                imgBox.classList.add('imgBox');
-                imgBox.setAttribute("tabindex", "-1");
+                    imgBox.classList.add('imgBox');
+                    imgBox.setAttribute("tabindex", "-1");
             
                     const img = document.createElement( 'img' );
-                    img.setAttribute("tabindex" , "-1");
-                    img.setAttribute("src", imagePath + photographers[i].portrait);
-                    img.setAttribute("alt", photographers[i].name);
-                    img.setAttribute('data-userId', photographers[i].id);
-                    img.setAttribute('data-userName', photographers[i].name);
-                    img.setAttribute("aria-role", "link");
-                    img.addEventListener('click', goToPhotographersPage );
+                        img.setAttribute("tabindex" , "-1");
+                        img.setAttribute("src", imagePath + photographers[i].portrait);
+                        img.setAttribute("alt", photographers[i].name);
                 
                 imgBox.appendChild(img);
-            
-            contentBox.appendChild(imgBox);
 
-        
+                const h2 = document.createElement('h2');
+                    h2.textContent = photographers[i].name;
+                    h2.classList.add('userName');
+            
+                a.appendChild(imgBox);
+                a.appendChild(h2);
 
                 const figCaption = document.createElement('figcaption');
-
-                    const a = document.createElement( 'a' );
-                    a.setAttribute("tabindex", "0");
-                    a.classList.add('userName');
-                    a.textContent = photographers[i].name;
-                    a.setAttribute('href', "./pages/photographer.html" + "?" + "id=" + photographers[i].id + "&" + "name=" + photographers[i].name);
-                    a.setAttribute('data-userId', photographers[i].id);
-                    a.setAttribute('aria-label', photographers[i].name);
-                    a.setAttribute('data-userName', photographers[i].name);
-                    a.setAttribute("aria-role", "button");
-                    // a.addEventListener('click', goToPhotographersPage );
-                    // a.addEventListener('keypress', (e) => {
-                    //     e.preventDefault();
-
-                    //     goToPhotographersPage(e);
-                    // })
 
                     const p1 = document.createElement('p');
                     p1.classList.add("userLocation");

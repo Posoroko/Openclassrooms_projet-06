@@ -49,25 +49,18 @@
                   Trier par:
                 </span>
 
+<!-- filter box -->
+
                 <select class="filterDropDownMenu" id="filterDropDownMenu" tab-index="0" >
-                  <option class="filterOption" id="filterBox-1"  aria-label="trier les images par date de parution" tabindex="0" selected="selected" value="filterBox-1">Date</option>
+                  <option class="filterOption" id="filterBox-1"  aria-label="filter by date" tabindex="0" selected="selected" value="filterBox-1">Date</option>
 
-                  <option class="filterOption" id="filterBox-2" aria-label="trier les images par popularité"  tabindex="0" value="filterBox-2">Popularité</option>
+                  <option class="filterOption" id="filterBox-2" aria-label="filter by likes"  tabindex="0" value="filterBox-2">Popularité</option>
 
-                  <option class="filterOption" id="filterBox-3" aria-label="trier les images par titre" value="filterBox-3">Titre</option>
-                  lte
+                  <option class="filterOption" id="filterBox-3" aria-label="filter by title" value="filterBox-3">Titre</option>
+                  
                   <span class="icon expandMore arrowDown" id="expandMore" tab-index="-1">expand_more</span>
                 </select>
 
-                <!-- <span class="filterDropDownMenu" id="filterDropDownMenu" tab-index="0" role="listbox" aria-activedescendant="filterBox-1">
-                  <div class="filterOption" id="filterBox-1" role="option" aria-label="trier les images par date de parution"tabindex="0" >Date</div>
-
-                  <div class="filterOption" id="filterBox-2" role="option" aria-label="trier les images par popularité"  tabindex="0">Popularité</div>
-
-                  <div class="filterOption" id="filterBox-3" role="option" aria-label="trier les images par titre">Titre</div>
-                  
-                  <span class="icon expandMore arrowDown" id="expandMore" tab-index="-1">expand_more</span>
-                </span> -->
               </span>
           </header>
 
@@ -86,11 +79,9 @@
           </dialog>
 
       </section>
-
-      
-
-      
     </main>
+
+<!-- contact modal -->
     
     <dialog class="contactModal modal" id="contactModal" data-modal="contactModal" tabindex="-1">
 
@@ -125,7 +116,7 @@
         <span class="closeButton icon" id="closeModalButton" data-modal="contactModal" tabindex="0">close</span>
     </dialog>
 
-      
+  <!-- lightbox modal     -->
 
     <dialog  class="modal lightbox" id="lightbox" aria-label="image closeup view">
       <div class="content">
@@ -147,6 +138,8 @@
 
       <span class="closeButton closeLightboxButton icon" id="closeLightboxButton" data-modal="lightbox" tabindex="0">close</span>
     </dialog>
+
+<!-- info box a the bottom -->
 
     <div class="infoBox" tabindex="-1">
       <p class="likeBox" tabindex="-1">
