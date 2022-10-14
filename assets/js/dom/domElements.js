@@ -34,7 +34,8 @@ const modalElements = {
         dialog: document.getElementById('contactModal'),
         name: document.getElementById('photographerName'),
         submit: document.getElementById('submitButton'),
-        form: document.getElementById('contactForm')
+        form: document.getElementById('contactForm'),
+        submitBtn: document.getElementById('contactFormSubmitBtn'),
     },
     mediaModal: {
         dialog: document.getElementById('mediaModal'),

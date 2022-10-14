@@ -4,7 +4,6 @@
     display: flex;
     position: relative;
     z-index: 1000;
-    border: 1px solid red;
 }
 .filterBox .text {
     padding: 8px 12px;

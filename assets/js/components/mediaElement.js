@@ -82,7 +82,7 @@ const createImgElement = (media, name) => {
 
 const createFigCaption = (media) => {
     const figcaption = document.createElement('figcaption');
-    figcaption.setAttribute('tabindex', "0")
+    figcaption.setAttribute('tabindex', "0");
     figcaption.innerText = media.title;
     figcaption.id = "mediaElementTitle";
 

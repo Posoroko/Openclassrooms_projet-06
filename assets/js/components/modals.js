@@ -1,4 +1,4 @@
-import { modalElements } from "../dom/domElements.js";
+import { domElements, modalElements } from "../dom/domElements.js";
 import { photographerName } from "../pages/photographer.js";
 import { arrayOfMediaCards } from "../tools/filterPhotoCollection.js";
 
@@ -38,8 +38,28 @@ const openContactModal = () => {
 
     //prevent scrolling behind the modal
     document.getElementsByTagName('html')[0].style.overflow = "hidden";
+
+    modalElements.contactModal.submitBtn.addEventListener('click', submitForm);
 }
 
+const submitForm = (e) => {
+
+    const form = modalElements.contactModal.form;
+
+    e.preventDefault();
+
+    const contactInfo = {
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        message: form.message.value
+    }
+
+    console.table(contactInfo);
+    form.reset();
+    modalElements.contactModal.dialog.close();
+    
+}
 
 
 let indexOfCurrentloadedMedia = null;

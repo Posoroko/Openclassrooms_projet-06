@@ -18,7 +18,8 @@
     padding: 18px 40px;
 }
 
-.contact_button:hover, .submitButton:hover {
+.contact_button:hover, .submitButton:hover,
+.contact_button:focus, .submitButton:focus {
     background-color: var(--darkred);
 }
 

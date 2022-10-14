@@ -64,7 +64,9 @@
               </span>
           </header>
 
-          <section class="photoCollection" id="photoCollection" tabindex="0">
+<!-- photo collection -->
+
+          <section class="photoCollection" id="photoCollection" tabindex="-1">
               <!-- Photo collection created by JS -->
           </section>
 
@@ -95,20 +97,20 @@
           <form class="contactForm" id="contactForm">
             <div>
               <label for="firstName" tabindex="-1">Prénom</label>
-              <input type="text" id="firstName" tabindex="0" />
+              <input name="firstName" type="text" id="firstName" tabindex="0" />
   
               <label for="lastName" tabindex="-1">Nom</label>
-              <input type="text" id="lastName"  tabindex="0"/>
+              <input input="lastNAme" type="text" id="lastName"  tabindex="0"/>
   
               <label for="email" tabindex="-1">email</label>
-              <input type="text" id="email"  tabindex="0"/>
+              <input name="email" type="text" id="email"  tabindex="0"/>
   
               <label for="message" tabindex="-1">Votre message</label>
               <textarea name="message" id="message" rows="10" tabindex="0"></textarea>
 
             </div>
 
-            <button class="submitButton" tabindex="0">Envoyer</button>
+            <button id="contactFormSubmitBtn" class="submitButton" tabindex="0">Envoyer</button>
 
           
         </form>
