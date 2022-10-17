@@ -10,13 +10,14 @@
 }
 
 .filterDropDownMenu {
+    font-size: 18px;
 
     min-height: 35px !important;
     color: white;
     background-color: var(--red);
-    /* padding: 5px 10px; */
+    padding: 5px 10px;
     border: none;
-    /* border-radius: 5px; */
+    border-radius: 5px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -24,8 +25,9 @@
 }
 
 .filterOption {
+    font-size: 18px;
     width: 100%;
-    padding: 8px 48px 8px 12px;
+    padding: 15px;
     display: flex;
     align-items: center;
     cursor: pointer;

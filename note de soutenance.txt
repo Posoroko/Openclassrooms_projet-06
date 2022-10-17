@@ -1,0 +1,56 @@
+Soutenance projet -06
+
+
+Construire un prototype  fonctionnel du nouveau site FishEye.
+
+plateforme photographe, utilisateurs montrer leur travail, trouver des clients.
+
+site static => site dynamique
+BDD => JS
+
+9999999999999999
+
+2 pages
+
+9999999999999999
+
+composants de la page photographe
+
+9999999999999999
+
+Objectif principale: Accessibilité
+
+
+9999999999999999
+
+gatheck007@gmail.com
+Plan:
+
+gatheck
+
+
+présentation:
+2 pages générées dynamiquement
+
+Vidéo de navigation au clavier
+
+
+
+code:
+    nomenclature claire et efficace, fonctions et variable mais aussi pour les dossier et fichiers
+
+    génération du contenu avec js
+    très bon pour s’adapter à la base de données 
+    JS:  factory functions plutôt que des classes 
+        construction des composants, même composants qu’en CSS
+
+    
+
+
+4    -difficulté rencontrées
+        accessibilité, narrateur
+        pas mal d’event listener pour assurer une bonne expérience utilisateur
+-points d’amélioration possibles
+-héberger plusieurs format d’image… miniatures, moyennes et grandes pour optimiser => accessibilité  (25 - 30 mo pour une seule page )
+-ne pas mélanger les langues => mieux pour le narateur
+-solution pour le SEO: (pre-rendering) TRES IMPORTANT

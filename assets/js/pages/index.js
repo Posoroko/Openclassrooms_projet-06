@@ -92,8 +92,8 @@ const initiateHomepage = async () => {
     for (let i = 0; i < cardList.length; i++) {
         domElements.photographer_section.appendChild(cardList[i]);
     };
+
 };
 
     
 export { initiateHomepage }
-    
